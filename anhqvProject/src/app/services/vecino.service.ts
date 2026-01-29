@@ -14,7 +14,6 @@ export class VecinoService {
 
   constructor() { }
 
-
   getVecinos(){
     return this.vecinos;
   }

@@ -1,0 +1,35 @@
+.home-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.edificio-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 5px solid #8b4513;
+  margin-bottom: 30px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #d2691e; /* Color teja */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: #a0522d;
+  transform: scale(1.05);
+}

@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+/* Estilos para el cuerpo de la aplicación */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4e8c1; /* Color crema tipo pared de portal antiguo */
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h2 {
+  color: #8b4513; /* Marrón madera */
+  border-bottom: 2px solid #8b4513;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}

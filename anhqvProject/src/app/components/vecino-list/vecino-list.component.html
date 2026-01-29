@@ -1,0 +1,50 @@
+<h2>LISTA DE VECINOS</h2>
+<ul>
+    <li *ngFor="let vecino of listaVecinos">
+        <h3><span appGritar>{{vecino.nombre}}</span> -- {{vecino.piso | mayusculas}} -- {{vecino.deuda}}</h3>
+    </li>
+</ul>
+<h2>ORDENAR POR DEUDA VECINAL</h2>
+<button (click)="ordenarArray()">ORDENAR</button>
+<ul>
+    <li *ngFor="let vecino of ordenDeuda">
+        <h3><span appGritar>{{vecino.nombre}}</span> -- {{vecino.piso | mayusculas}} -- {{vecino.deuda}}</h3>
+    </li>
+</ul>
+<h2>CRUD VECINO</h2>
+<label for="nombre">Nombre: </label> &nbsp;
+<input [(ngModel)]="nombre" [disabled]="id !== null"><br>
+<label for="piso">Piso: </label> &nbsp;
+<input [(ngModel)]="piso"><br>
+<label for="deuda">Deuda: </label> &nbsp;
+<input type="deuda" [disabled]="id !== null">
+<br>
+<button (click)="guardar()">
+    {{id !== null ? 'Guardar Cambios' : 'Agregar Vecino'}}
+</button> 
+<button *ngIf="id !== null" (click)="limpiarFormulario()">Cancelar</button>
+<h2>LISTA DE VECINOS</h2>
+<ul>
+    <li *ngFor='let vecino of listaVecinos'>
+        {{vecino.nombre}} -
+        {{vecino.piso}} - 
+        {{vecino.deuda}} €
+        &nbsp;
+        <button (click)="eliminar(vecino.id)">Eliminar</button> &nbsp;
+        <button (click)="prepararEdicion(vecino)">Actualizar</button> <hr>
+    </li>
+</ul>
+<h2>BUSQUEDA</h2>
+<label for="busqueda">Buscar por Nombre: </label> &nbsp;
+<input type="text" [(ngModel)]="textoBusqueda"><br>
+<button (click) = "busquedaPorNombre(textoBusqueda)">Buscar</button>
+<ul>
+    <li *ngFor = "let vecino of busquedaNombre">
+        {{vecino.nombre}} -
+        {{vecino.piso}} - 
+        {{vecino.deuda}} € 
+    </li>
+</ul>
+<div *ngIf="haBuscado && busquedaNombre.length === 0">
+    No se ha encontrado ningún vecino con ese nombre.
+</div>

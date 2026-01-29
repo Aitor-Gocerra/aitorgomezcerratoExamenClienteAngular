@@ -1,0 +1,23 @@
+<div class="container">
+  <header style="text-align: center; margin-bottom: 20px;">
+    <h1>🏢 Comunidad Desengaño 21</h1>
+    <p><i>"Esta nuestra comunidad" - Pablo Rodriguez, Presidente de nuestra Comunidad.</i></p>
+  </header>
+
+  <div class="home-container">
+    <img src="../assets/images.webp" 
+         class="edificio-img" 
+         alt="Desengaño 21">
+
+    <nav class="nav-buttons">
+      <button routerLink="/vecinos" type="button" >📋 Ver Vecinos (Radio Patio)</button>
+      <button routerLink="/junta" type="button">⚖️ Ir a la Junta</button>
+    </nav>
+  </div>
+
+  <hr style="margin: 30px 0; border: 1px dashed #8b4513;">
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
